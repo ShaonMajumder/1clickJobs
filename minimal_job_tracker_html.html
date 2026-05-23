@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minimal Job Tracker</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   <style>
     :root {
       --bg: #f6f7fb;
@@ -488,7 +492,7 @@
           </div>
           <div class="job-actions">
             ${statusSelect(job)}
-            <button class="danger" onclick="deleteJob('${job.id}')">Delete</button>
+            <button class="danger" onclick="deleteJob('${job.id}')"><i class="fa-solid fa-trash"></i></button>
           </div>
         </div>
       `).join("");
@@ -514,7 +518,7 @@
               <input type="checkbox" ${source.isPortal ? "checked" : ""} onchange="togglePortal('${source.id}', this.checked)" />
               isPortal
             </label>
-            <button class="danger" onclick="deleteSource('${source.id}')">Delete</button>
+            <button class="danger" onclick="deleteSource('${source.id}')"><i class="fa-solid fa-trash"></i></button>
           </div>
         </div>
       `).join("");
